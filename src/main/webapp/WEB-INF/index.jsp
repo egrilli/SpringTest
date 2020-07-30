@@ -13,7 +13,8 @@
 		  <div class="card-body">
 		    <h5 class="card-title">Bienvenidos</h5>
 		    <p class="card-text">Sistema de gestión en seguridad empresarial.</p>
-		    <a href="Login.jsp" class="btn btn-primary">Login</a>
+		    <a href="/login" class="btn btn-primary">Login</a>
+		     <a href="/registro" class="btn btn-primary">Registro</a>
 		  </div>
 		</div>
 	

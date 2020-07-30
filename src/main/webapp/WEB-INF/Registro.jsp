@@ -14,7 +14,7 @@
 						 <c:if test="${not empty mensaje}">
 						      <div class="alert alert-info">${mensaje.getsMensaje()}</div>
 						 </c:if>
-							<form action="Registro" method="POST">
+							<form:form action="/registrousuario" method="POST" modelAttribute="usuario">
 								<div class="form-group">
 									<label for="">Nombre:</label> 
 									<input type="text" value=""
@@ -34,7 +34,7 @@
 										class="form-control" placeholder="Ingrese Password"><br>
 									<button class="btn btn-primary float-right" type="submit">Registrarse</button>
 								</div>
-							</form>
+							</form:form>
 						</div>
 					</div>
 				</div>
