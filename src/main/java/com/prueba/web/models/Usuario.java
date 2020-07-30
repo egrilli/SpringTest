@@ -1,39 +1,26 @@
 package com.prueba.web.models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="usuarios")
+@Table(name = "usuarios")
 public class Usuario {
-	//atributos del objeto
-	int id;
-	String sNombre;
-	String sEmail;
-	String sRut;
-	String sPassword;
-	
-	//constructor vacio
-	public Usuario() {
-		
-	} 
-	
-	//constructor con parametros
-	public Usuario(int iId, String sNombre, String sEmail, String sRut, String sPassword) {
-		super();
-		this.id = iId;
-		this.sNombre = sNombre;
-		this.sEmail = sEmail;
-		this.sRut = sRut;
-		this.sPassword = sPassword;
-	}
-	
-	//get y set
-	public int getId() {
+	// atributos del objeto
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String sNombre;
+	private String sEmail;
+
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -67,6 +54,14 @@ public class Usuario {
 
 	public void setsPassword(String sPassword) {
 		this.sPassword = sPassword;
+	}
+
+	String sRut;
+	String sPassword;
+
+	// constructor vacio
+	public Usuario() {
+
 	}
 
 }

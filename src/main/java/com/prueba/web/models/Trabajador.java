@@ -1,36 +1,28 @@
 package com.prueba.web.models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="trabajadores")
+@Table(name = "trabajadores")
 public class Trabajador {
-	//atributos del objeto
-	int id;
-	String sNombre;
-	String sEmail;
-	String sRut;
-	int iEmpresaID;
-	
-	public Trabajador() {
-		
-	}
-	
-	public Trabajador(int id, String sNombre, String sEmail, String sRut, int iEmpresaID) {
-		super();
-		this.id = id;
-		this.sNombre = sNombre;
-		this.sEmail = sEmail;
-		this.sRut = sRut;
-		this.iEmpresaID = iEmpresaID;
-	}
+	// atributos del objeto
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String sNombre;
+	private String sEmail;
+	private String sRut;
+	private Long iEmpresaID;
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -58,13 +50,16 @@ public class Trabajador {
 		this.sRut = sRut;
 	}
 
-	public int getiEmpresaID() {
+	public Long getiEmpresaID() {
 		return iEmpresaID;
 	}
 
-	public void setiEmpresaID(int iEmpresaID) {
+	public void setiEmpresaID(Long iEmpresaID) {
 		this.iEmpresaID = iEmpresaID;
 	}
-	
-	
+
+	public Trabajador() {
+
+	}
+
 }
