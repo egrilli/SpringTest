@@ -15,6 +15,8 @@ public class Usuario {
 	private Long id;
 	private String sNombre;
 	private String sEmail;
+	private String sRut;
+	private String sPassword;
 
 	public Long getId() {
 		return id;
@@ -56,8 +58,7 @@ public class Usuario {
 		this.sPassword = sPassword;
 	}
 
-	String sRut;
-	String sPassword;
+	
 
 	// constructor vacio
 	public Usuario() {

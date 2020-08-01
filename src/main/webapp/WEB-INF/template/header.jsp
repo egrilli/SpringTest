@@ -15,4 +15,3 @@
 	
 <link rel="stylesheet" type="text/css" href="template/Css/style.css"/>
 </head>
-<body>
