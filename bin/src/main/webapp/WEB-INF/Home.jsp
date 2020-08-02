@@ -2,11 +2,10 @@
 <jsp:param name='title' value='Home' />
 <jsp:param name='description' value='Home' />
 </jsp:include>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<body>
+
 <div class="fondo-home"> 
 	
-<h1> Bienvenido al menú de Administración </h1>
+<h1> Bienvenido al menu de Administracion </h1>
 
 
 <div class="row justify-content-center aling-items-center mt-5  justify-content">
@@ -51,6 +50,7 @@
 </div>
 
 
+
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
 		crossorigin="anonymous"></script>
@@ -62,7 +62,4 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 		crossorigin="anonymous"></script>
-
-	
-</body>
-</html>
+<%@ include file="template/footer.jsp"%>

@@ -1,37 +1,40 @@
 <jsp:include page='template/header.jsp'>
-<jsp:param name='title' value='Formulario Login' />
-<jsp:param name='description' value='Formulario Login' />
+	<jsp:param name='title' value='Formulario Login' />
+	<jsp:param name='description' value='Formulario Login' />
 </jsp:include>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <body class="bg-info">
 	<!-- editando vista -->
 	<main>
-	<div class="fondo-login">
+		<div class="fondo-login">
 
-		<div class="container">
-			<h1>LOGEARSE A LA MEJOR PLATAFORMA DEL MUNDO</h1>
-			<div class="row vh-100">
-				<div class="col-md-4 mx-auto d-flex align-items-center">
-				
-					<div class="card bg-light mb-3 shadow-lg">
-						<div class="card-header">Login</div>
-						<div class="card-body">
-						<form:form action="/Login" method="POST" modelAttribute="usuario">
-								<div class="form-group">
-									<form:label path="sEmail">Email: </form:label>
-								 <form:input path="sEmail" required="required"
-										class="form-control" placeholder="Ingrese Correo"/><br>
-										 <form:label path="sPassword">Password: </form:label>
-								 <form:input path="sPassword" required="required"
-										class="form-control" placeholder="Ingrese Password"/><br>
-									<button class="btn btn-primary float-right" type="submit">Login</button>
-								</div>
-							</form:form>
+			<div class="container">
+				<h1>LOGEARSE A LA MEJOR PLATAFORMA DEL MUNDO</h1>
+				<div class="row vh-100">
+					<div class="col-md-4 mx-auto d-flex align-items-center">
+
+						<div class="card bg-light mb-3 shadow-lg">
+							<div class="card-header">Login</div>
+							<div class="card-body">
+								<form:form action="/login" method="POST"
+									modelAttribute="usuario">
+									<div class="form-group">
+										<form:label path="sEmail">Email: </form:label>
+										<form:input path="sEmail" required="required"
+											class="form-control" placeholder="Ingrese Correo" />
+										<br>
+										<form:label path="sPassword">Password: </form:label>
+										<form:input path="sPassword" required="required"
+											class="form-control" placeholder="Ingrese Password" />
+										<br>
+										<button class="btn btn-primary float-right" type="submit">Login</button>
+									</div>
+								</form:form>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 		</div>
 	</main>
 
@@ -47,6 +50,6 @@
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 		crossorigin="anonymous"></script>
 
-	
+
 </body>
 </html>
