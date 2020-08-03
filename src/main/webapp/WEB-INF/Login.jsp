@@ -25,7 +25,7 @@
 										<br>
 										<form:label path="sPassword">Password: </form:label>
 										<form:input path="sPassword" required="required"
-											class="form-control" placeholder="Ingrese Password" />
+											type="password" class="form-control" placeholder="Ingrese Password" />
 										<br>
 										<button class="btn btn-primary float-right" type="submit">Login</button>
 									</div>

@@ -9,34 +9,37 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.prueba.web.models.Empresa;
+import com.prueba.web.models.Trabajador;
+import com.prueba.web.services.TrabajadorService;
 import com.prueba.web.services.ClienteService;
 import com.prueba.web.util.Utilidades;
 
-@Controller 
-public class ClienteController {
-	
+@Controller
+public class TrabajadorController {
+	@Autowired
+	TrabajadorService ts;
 	@Autowired
 	ClienteService clienteService;
-	
 	@Autowired
 	Utilidades util;
 	
-	@RequestMapping("/cliente")
-	public String cliente(HttpSession session, Model model) {
-		
+	@RequestMapping("/trabajador")
+	public String IngresoAccidente(HttpSession session, Model model) {
+
 		if(util.validarSesion(session)) {
-			model.addAttribute("empresa", new Empresa());
-			return "registro-cliente.jsp";
+			model.addAttribute("trabajador", new Trabajador());
+			model.addAttribute("listaEmpresa", clienteService.buscarTodos());
+			
+			return "/registro-trabajador.jsp";
     	}else {
     		return "redirect:/login";
     	}	
 	}
 	
-	@PostMapping("/cliente")
-	public String registro(@ModelAttribute("empresa") Empresa empresa) {
+	@PostMapping("/trabajador")
+	public String guardarTrabajador(@ModelAttribute("trabajador") Trabajador trabajador) {
+			ts.guardarTrabajador(trabajador);
 		
-		clienteService.guardarEmpresa(empresa);
 		return "redirect:/home";
 	}
 	

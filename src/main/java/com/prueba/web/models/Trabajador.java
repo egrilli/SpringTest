@@ -1,9 +1,12 @@
 package com.prueba.web.models;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,7 +19,11 @@ public class Trabajador {
 	private String sNombre;
 	private String sEmail;
 	private String sRut;
-	private Long iEmpresaID;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="empresa_id")
+    private Empresa empresa;
+
 
 	public Long getId() {
 		return id;
@@ -50,12 +57,12 @@ public class Trabajador {
 		this.sRut = sRut;
 	}
 
-	public Long getiEmpresaID() {
-		return iEmpresaID;
+	public Empresa getEmpresa() {
+		return empresa;
 	}
 
-	public void setiEmpresaID(Long iEmpresaID) {
-		this.iEmpresaID = iEmpresaID;
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
 	}
 
 	public Trabajador() {

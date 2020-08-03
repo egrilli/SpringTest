@@ -4,6 +4,34 @@
 </jsp:include>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <body>
+<nav id="navbar-example2" class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="/home">Prueba 5</a>
+  <ul class="nav nav-pills">
+  	<li class="nav-item">
+      <a class="nav-link" href="/home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/cliente">Clientes Empresa</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/trabajador">Colaborador Empresa</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/accidente">Accidentes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/reporte/clientes">Reportes</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">${user.sNombre}</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/editar">Editar</a>
+        <div role="separator" class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/logout">Cerrar sesión</a>
+      </div>
+    </li>    
+  </ul>
+</nav>
 <div class="fondo-home"> 
 	
 <h1> Bienvenido al menú de Administración </h1>
@@ -15,7 +43,7 @@
   <div class="card-body">
     <h5 class="card-title">Registro</h5>
     <p class="card-text">Panel para poder ingresar un nuevos cliente a nuestra base de datos.</p>
-    <a href="formulario-registro-cliente.jsp" class="btn btn-warning float-right">Vamos!</a>
+    <a href="/cliente" class="btn btn-warning float-right">Vamos!</a>
   </div>
 </div>
 <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
@@ -23,7 +51,7 @@
   <div class="card-body">
     <h5 class="card-title">Registro de Colaborador</h5>
     <p class="card-text">Panel dinamico para poder ingresar un nuevo colaborador a la base de datos</p>
-<a href="Trabajador.jsp" class="btn btn-warning float-right">Vamos!</a>
+<a href="/trabajador" class="btn btn-warning float-right">Vamos!</a>
   </div>
 </div>
 <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
@@ -31,7 +59,7 @@
   <div class="card-body">
     <h5 class="card-title">Registrar Accidente</h5>
     <p class="card-text">Panel para tener Registro de los Accidentes de nuestros clientes de forma centralizada.</p>
-<a href="formulario-registro-accidente.jsp" class="btn btn-warning float-right">Vamos!</a>
+<a href="/accidente" class="btn btn-warning float-right">Vamos!</a>
   </div>
 </div>
 
@@ -41,7 +69,7 @@
   <div class="card-body">
     <h5 class="card-title">Resumen Clientes</h5>
     <p class="card-text">Panel para poder visualizar todos los datos de nuestros clientes de forma resumida</p>
-  <a href="" class="btn btn-warning float-right">Vamos!</a>
+  <a href="/reporte/clientes" class="btn btn-warning float-right">Vamos!</a>
   </div>
 </div>
  </div>
