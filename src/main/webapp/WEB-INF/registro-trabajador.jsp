@@ -6,9 +6,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <body>
 <nav id="navbar-example2" class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="/home">Prueba 5</a>
-  <ul class="nav nav-pills">
+ <div class= "contenedor">
+  <a class="navbar-brand" href="/home">Sistema Integral RRHH</a>
+ <div class= "nav-derecha">
+  <ul class="nav nav-pills ">
   	<li class="nav-item">
+  	
       <a class="nav-link" href="/home">Home</a>
     </li>
     <li class="nav-item">
@@ -32,6 +35,8 @@
       </div>
     </li>    
   </ul>
+  </div>
+  </div>
 </nav>
 	<div class="fondo-registro">
 		<div class="container">

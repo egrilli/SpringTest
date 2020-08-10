@@ -5,27 +5,39 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <body>
-	<nav id="navbar-example2" class="navbar navbar-light bg-light">
-		<a class="navbar-brand" href="/home">Prueba 5</a>
-		<ul class="nav nav-pills">
-			<li class="nav-item"><a class="nav-link" href="/cliente">Clientes
-					Empresa</a></li>
-			<li class="nav-item"><a class="nav-link" href="#alumno">Colaborador</a>
-			</li>
-			<li class="nav-item"><a class="nav-link" href="#alumno">Accidentes</a>
-			</li>
-			<li class="nav-item"><a class="nav-link" href="#alumno">Resumen</a>
-			</li>
-			<li class="nav-item dropdown"><a
-				class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
-				role="button" aria-haspopup="true" aria-expanded="false">${user.sNombre}</a>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="/editar">Editar</a>
-					<div role="separator" class="dropdown-divider"></div>
-					<a class="dropdown-item" href="/logout">Cerrar sesión</a>
-				</div></li>
-		</ul>
-	</nav>
+<nav id="navbar-example2" class="navbar navbar-light bg-light">
+ <div class= "contenedor">
+  <a class="navbar-brand" href="/home">Sistema Integral RRHH</a>
+ <div class= "nav-derecha ">
+  <ul class="nav nav-pills ">
+  	<li class="nav-item">
+  	
+      <a class="nav-link" href="/home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/cliente">Clientes Empresa</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/trabajador">Colaborador Empresa</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/accidente">Accidentes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/reporte/clientes">Reportes</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">${user.sNombre}</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/editar">Editar</a>
+        <div role="separator" class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/logout">Cerrar sesión</a>
+      </div>
+    </li>    
+  </ul>
+  </div>
+  </div>
+</nav>
 	<div class="fondo-registro-cliente">
 		<div class="container py-5">
 			<div class="row">

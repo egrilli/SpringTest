@@ -5,9 +5,12 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <body>
 <nav id="navbar-example2" class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="/home">Prueba 5</a>
-  <ul class="nav nav-pills">
+ <div class= "contenedor">
+  <a class="navbar-brand" href="/home">Sistema Integral RRHH</a>
+ <div class= "nav-derecha">
+  <ul class="nav nav-pills ">
   	<li class="nav-item">
+  	
       <a class="nav-link" href="/home">Home</a>
     </li>
     <li class="nav-item">
@@ -31,11 +34,14 @@
       </div>
     </li>    
   </ul>
+  </div>
+  </div>
 </nav>
 <div class="fondo-home"> 
-	
-<h1> Bienvenido al menú de Administración </h1>
+ <div class= "contenedor justify-content-center">
 
+<h1> Bienvenido al menú de Administración </h1>
+</div>
 
 <div class="row justify-content-center aling-items-center mt-5  justify-content">
 <div class="card text-white bg-primary mb-3  " style="max-width: 18rem;">
@@ -46,6 +52,8 @@
     <a href="/cliente" class="btn btn-warning float-right">Vamos!</a>
   </div>
 </div>
+<pre>  </pre>
+
 <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
   <div class="card-header">Ingresar Colaborador </div>
   <div class="card-body">
@@ -54,6 +62,7 @@
 <a href="/trabajador" class="btn btn-warning float-right">Vamos!</a>
   </div>
 </div>
+<pre>  </pre>
 <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
   <div class="card-header">Accidente</div>
   <div class="card-body">
@@ -62,8 +71,7 @@
 <a href="/accidente" class="btn btn-warning float-right">Vamos!</a>
   </div>
 </div>
-
-
+<pre>  </pre>
 <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
   <div class="card-header">Lista General</div>
   <div class="card-body">
