@@ -17,7 +17,7 @@ public class ReportesController {
 	public String MostrarTodos( Model model) {
 		
 		model.addAttribute("listaEmpresa", clienteService.buscarTodos());
-		return "/reportes/reporte-clientes.jsp";
+		return "/reportes/detalle-clientes.jsp";
 	}
 
 }

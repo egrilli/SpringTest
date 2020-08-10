@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -38,6 +39,12 @@ public class ClienteController {
 		
 		clienteService.guardarEmpresa(empresa);
 		return "redirect:/home";
+	}
+	
+	@RequestMapping("/empresa/editar/{empresaid}")
+	public String editar(@PathVariable("empresaid") Long id, Model model) {
+		model.addAttribute("empresa", clienteService.buscarEmpresaPorId(id));
+		return "editar-cliente.jsp";
 	}
 	
 }

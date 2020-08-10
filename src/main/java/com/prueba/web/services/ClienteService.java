@@ -22,4 +22,9 @@ public class ClienteService {
 		return clienteRepository.findAll();
 	}
 	
+	public Empresa buscarEmpresaPorId (Long id) {
+		return clienteRepository.findById(id).orElse(null);
+		
+	}
+	
 }

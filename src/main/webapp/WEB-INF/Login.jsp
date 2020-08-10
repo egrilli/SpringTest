@@ -3,20 +3,16 @@
 	<jsp:param name='description' value='Formulario Login' />
 </jsp:include>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<body class="bg-info">
-	<!-- editando vista -->
-	<main>
-		<div class="fondo-login">
 
-			<div class="container">
-				<h1>LOGEARSE A LA MEJOR PLATAFORMA DEL MUNDO</h1>
-				<div class="row vh-100">
-					<div class="col-md-4 mx-auto d-flex align-items-center">
-
-						<div class="card bg-light mb-3 shadow-lg">
-							<div class="card-header">Login</div>
-							<div class="card-body">
-								<form:form action="/login" method="POST"
+<body class="body-css-login">
+<div class="container h-80">
+<div class="row align-items-center h-100">
+    <div class="col-3 mx-auto">
+        <div class="text-center">
+        <br>
+            <img id="profile-img" class="rounded-circle profile-img-card" src="https://i.imgur.com/6b6psnA.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+          <form:form action="/login" method="POST"
 									modelAttribute="usuario">
 									<div class="form-group">
 										<form:label path="sEmail">Email: </form:label>
@@ -27,16 +23,13 @@
 										<form:input path="sPassword" required="required"
 											type="password" class="form-control" placeholder="Ingrese Password" />
 										<br>
-										<button class="btn btn-primary float-right" type="submit">Login</button>
-									</div>
-								</form:form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Entrar</button>
+         </form:form>
+        </div>
+    </div>
+</div>
+</div>
+		
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -53,3 +46,4 @@
 
 </body>
 </html>
+

@@ -45,7 +45,9 @@
 											<th scope="col">Contacto</th>
 											<th scope="col">Telefono</th>
 											<th scope="col">Correo</th>
-											<th scope="col">Detalle</th>
+											<th scope="col">Resumen</th>
+											<th scope="col">Editar</th>
+											
 										</tr>
 									</thead>
 									<tbody>
@@ -58,7 +60,8 @@
 												<td>${empresa.sNombreContacto}</td>
 												<td>${empresa.sTelefono}</td>
 												<td>${empresa.sCorreo}</td>
-												<td><a href="/empresa/${empresa.id}"></a></td>
+												<td><a href="/empresa/resumen/${empresa.id}">Resumen</a></td>
+												<td><a href="/empresa/editar/${empresa.id}">Editar</a></td>
 											</tr>
 										</c:forEach>
 									</tbody>
